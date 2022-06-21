@@ -4,12 +4,57 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>swapping</title>
     </head>
     <body>
             <script> 
-            
-            
+                        let swap = function( a,b,c,d){
+                                a=a+b+c+d;
+                                b=a-b-c-d;
+                                c=a-b-c-d;
+                                d=a-b-c-d;
+                                a=a-b-c-d;
+                               console.log('a after swapping',a)
+                               console.log('b after swapping',b);
+                               console.log('c after swapping',c);
+                               console.log('d after swapping',d);
+                            }
+                                
+                               swap(10,20,30,40,);
+                              /*  swap(100,200,300,400,);
+                               swap(1000,2000,3000,4000,); */
+                            let arrayswap =[1,2,3,4,5];
+                            
+                            let swaparr =arrayswap[1];
+                                arrayswap[1] = arrayswap[2];
+                                arrayswap[2] = arrayswap[3];
+                                arrayswap[3] =swaparr;
+                                    arrayswap.forEach(function(element){ 
+                                    console.log(element);
+                              });  
+                                //console.log('after swapping',array);
+                                
+                                
+                              let user ={ 
+                                    
+                                    name:'payal',
+                                    surname:'dhakad',
+                                    contact:'1234',
+                              
+                              } 
+                              console.log(user)
+                              
+                              let userswap =user.name;
+                                user.name =user.surname;
+                                user.surname =user.contact;
+                                user.contact =userswap;
+                                
+                                
+                              for(let i in user){ 
+                                    console.log(user[i]);
+                                    
+                              }
+                              
             </script>
     </body>
 </html>
