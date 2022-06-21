@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Events</title>
+    </head>
+    <body>
+            <div id="demo" class="democlass">hello</div>
+            <!-- <input type="button" onClick="alert()" value="click here"> -->
+        <script> 
+                
+              
+                 /* document.addEventListener("mouseover", myfunc);
+                function myfunc(event) {
+                alert(event.type + " at " + event.currentTarget);
+               alert("Coordinates: " + event.clientX + ":" + event.clientY);};
+               alert('okok'+event.altKey)
+                 */
+                 document.getElementById('demo').addEventListener('click',function(e){ 
+                 
+                        let variable;
+                        
+                        variable = e.target;
+                        variable = e.target.className;
+                        variable =Array.from(e.target.classList);
+                        variable =e.target.id;
+                        variable =e.target.className;
+                        variable =Array.from(e.target.classList);
+                        variable=e.offsetX;
+                        variable=e.offsetY;
+                        variable=e.clientX;
+                        variable=e.clientY;
+                        variable=e.currentTarget;
+                        variable=e.type;
+                        variable=e.altKey;
+                        variable=e.button;
+                        variable=e.charCode;
+                        variable=e.code;
+                        variable=e.deltaX;
+                        variable=e.target.location;
+                        variable=e.view.location;
+                        variable=e.which;
+                        variable=e.shiftKey;
+                        variable=e.screenY;
+                        variable=e.screenX;
+                        variable=e.pageX;
+                        variable=e.pageY;
+                        variable=e.keyCode;
+                        variable=e.detail;
+                        variable=e.code;
+                        variable=e.deltaX;
+                        variable=e.deltaY;
+                        variable=e.button;
+                      //  variable=e.charCode;
+                        
+                        
+                        
+                        
+                        console.log(variable);
+                 
+                 
+                 
+                 
+                 });
+        </script>
+    </body>
+</html>
