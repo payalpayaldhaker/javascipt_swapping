@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>async  await api</title>
+    </head>
+    <body>
+            <ul id="list"></ul>
+            <script>
+            
+            //async hamesa promise return karta he
+            
+             async function myFunc(){ 
+              let response = await fetch ('https://api.github.com/users');
+              console.log(response);
+              let users  = await response.json();
+              console.log(users);
+                  return users;
+              }
+              
+              let a = myFunc();
+              console.log(a);
+              a.then((data)=>{ 
+                console.log(data);
+                let str =''
+                let list =document.getElementById('list');
+                data.forEach(function(element){
+                  str += `<li>${element.login}</li>`
+                })
+                list.innerHTML =str;
+              })
+              .catch((error)=>{ 
+              console.log(error);
+              })
+                 
+             /*   async  function payal(){ 
+                   // console.log('inside');
+                  let response =await fetch('https://api.github.com/users')  
+                 // console.log(' before response')
+                  
+                  let users = await response.json();
+                 // console.log('after response');
+                  return users;
+                   // return "payal";
+                    
+                 }
+                 //console.log('before calling')
+                  let  str = payal();
+                 // console.log('after calling');
+                 // console.log(str);
+                  str.then(function(data){ 
+                  //console.log(data)
+                    let list = document.getElementById('list');
+                  str1 ='',
+                  data.forEach(function(element){ 
+                  //console.log(element);
+                  str += `<li>${element.id}${element.login}${element.starred_url}${element.node_id}</li>`
+                  });
+                  list.innerHTML =str;
+                  })
+                  .catch((error)=>{ 
+                  //console.log(error);
+                  })
+//console.log('last ending line'); */
+            </script>
+    </body>
+</html>

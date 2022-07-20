@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajax -tutorial</title>
+    </head>
+    <body>
+                 <button type="button"class="btn btn-primary"  id="fs">fisrtbutton</button>
+                 <ul id="demo"></ul>
+            <script> 
+                   
+                    let fs =document.getElementById("fs");
+                    fs.addEventListener('click',handlerClick);
+                    
+                    function handlerClick(){ 
+                        console.log('okoko');
+                    
+                    const xhr  = new XMLHttpRequest();
+                    
+                       // xhr.open('GET','https://dummy.restapiexample.com/api/v1/employees',true);
+                        xhr.open('POST','https://dummy.restapiexample.com/api/v1/create',true);
+                        
+                        xhr.onload = function(){ 
+                        
+                        if(this.status === 200){ 
+                           console.log(this.responseText);
+                            /*  let obj = JSON.parse(this.responseText);
+                             console.log(obj);
+                             
+                             let demo = document.getElementById('demo');
+                             
+                             let str ="";
+                             
+                             for(key in obj){ 
+                                    
+                                    str += `<li>${obj[key].employee_name}</li>`
+                                    
+                             }
+                             demo.innerHTML =str; */
+                            
+                        
+                        }
+                        else{ 
+                            console.log('ajx has been error')
+                        }
+                        
+                        console.log('okk');
+                        }
+                        
+                        let data =`{"name":"payal","surname":"dhakad"}`
+                        xhr.send(data);
+                       // xhr.send();
+                        console.log('done');
+                        
+                        
+                    }
+                
+            </script>
+    </body>
+</html>

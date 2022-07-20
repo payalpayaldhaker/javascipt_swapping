@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>regular expression</title>
+  </head>
+  <body>
+    <script>
+      //regulare expression
+      let regular = /dhakad/g; //global -g
+     //regular = /payal/i; //i = case incensitive
+      //  console.log(regular.source);
+
+      let str = `I’m a creative and payal advertising and marketing copywriter known for innovative ideas and a unique voice intended to gain attention, attract interest, inform decision-making, and spur action.
+
+My approach goes dhakad simply putting dhakad on a page. I’ll work with you one-on-one to determine your project’s business goals, understand your organization’s voice, then work to ensure consistent and effective brand identity across all platforms.
+
+I’m agile with the written word, innately dhakad, committed to ongoing dhakad, and determined to deliver impactful and memorable content in its myriad forms. 
+
+I’m also a GVSU Laker for a dhakad, a member of the West Michigan chapter of the American Advertising Federation, and the West Michigan chapter of the American  `
+ //1.exce() //exec() this fucnction will return arry for null match for no match
+      let result = regular.exec(str);
+      //console.log(result.input);
+      //console.log(result.index);
+      //console.log(result);
+      /*  result =regular.exec(str);
+              console.log(result); */
+
+      /* if (result) {
+        console.log(result);
+        console.log(result.input);
+        console.log(result.index);
+      } */
+
+//2.test() ; true or false return
+
+      let result2 = regular.test(str);
+     // console.log(result2);
+ //match() // it will return arry match or null
+        //let result3 =regular.match(str);//wrong
+        let result3 =str.match(regular);//right
+      // console.log(result3);
+ //search() // function will return  index first match else -1 
+        //let result3 =regular.rearch(str);//wrong
+        let result4 =str.search(regular);//right
+        //console.log(result4);
+ //replace() // function will new relpce string all the replcement
+        //let result3 =regular.replce(str);//wrong
+        let result5 =str.replace(regular,'akash dhakad');//right
+        //console.log(result5);
+      
+    </script>
+  </body>
+</html>

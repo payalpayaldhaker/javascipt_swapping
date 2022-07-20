@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Symbol in javssript</title>
+    </head>
+    <body>
+    
+    
+            <script>
+                //console.log('this is symbol');
+                
+                let sybl =Symbol('this is symbol');
+                console.log(typeof sybl);
+                console.log('this is symbol',sybl);
+                
+                
+                const a ='this hello gyus'
+                const b = 'this hello gyus'
+                console.log(a)
+                console.log(b)
+                console.log(a===b);
+                
+                let k1 =Symbol();
+                let k2 =Symbol();
+                
+                let obj ={}
+                
+                obj[k1] ='harry'
+                obj[k2] ='payal'
+                obj['name'] ='goodboy'
+                obj[4] ='good int'
+                
+                 console.log(obj,'this is object');
+                 //obj.k1 vala syntax use nhi karna hai 
+                //console.log(obj.k1,'this is object');
+                
+                //for in loop egnore symbol
+                for(let key in obj){
+                console.log(key,obj[key])
+                }
+                //obj symbol ko bhi ignore kar dega json me bhi
+                console.log(JSON.stringify(obj));
+            
+            </script>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>itrators</title>
+    </head>
+    <body>
+            <script>
+            
+            function myItratros(values){ //
+                    
+                  let i = 0;
+                  //we will return object
+                  return{ 
+                    next:function(){ 
+                    if(i < values.length){
+                    console.log('ok');
+                   return { 
+                        value:values[i++],
+                        done:false
+                    }
+                    }
+                    else{ 
+                    console.log('ok');
+                      return  {
+                        done:true,
+                        
+                        }
+                    }
+                    }
+                  }
+            }
+            
+            let myArry = ['apple','banana','mango','orange'];
+            
+            //console.log('my aaray',myArry);
+            
+            //useing the itrators
+          
+            let fruits = myItratros(myArry);
+            console.log(fruits.next().value);
+            console.log(fruits.next().value);
+            console.log(fruits.next().value);
+            console.log(fruits.next().value);
+            console.log(fruits.next().value); 
+            
+         /*    function  itratot2(values1){ 
+                let nextIndex1 ='';
+                return{ 
+                    next2:function(){ 
+                    if(nextIndex1<values1.length){ 
+                      console.log('ok');
+                      return{ 
+                        value:values1[nextIndex1++],
+                        done:false
+                      }
+                    }
+                    
+                      else{ 
+                      return{ 
+                      done:true
+                      }
+                      }
+                    }
+                    }
+                
+                }
+              
+            
+            let fruits1 =['a','b','c','d']
+            console.log(fruits1);
+            let fer =itratot2(fruits1);
+            console.log(fer.next2().value);
+            console.log(fer.next2().value); */
+            
+            
+            </script>
+    </body>
+</html>

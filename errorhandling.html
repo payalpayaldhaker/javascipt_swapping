@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>error handliing</title>
+    </head>
+    <body>
+        
+            <script>
+            let a ='payal';
+            
+            if(a!=undefined){ 
+               // throw new Error('this is not undefined')
+            }
+            else{ 
+            //console.log('this is undefined');
+            }
+           
+            try {
+                RangeError.console
+                console.log('try block');
+                myFunction();
+                
+            } catch(error) {
+                console.log('error block');
+                console.log(error);
+                console.log(error.name)
+                console.log(error.message)
+             
+            }finally{ 
+            console.log('finally block');
+            }
+            
+            </script> 
+    </body>
+</html>

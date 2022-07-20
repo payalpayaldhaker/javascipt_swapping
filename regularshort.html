@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>regular sgorthand prperty</title>
+    </head>
+    <body>
+            <script> 
+          let  regex =/\war/;           //word charcter _or number or alphabet
+                  /* regex =/\w+dir/;   //word charcter one more 
+                const str ='har%123dir bhai'; */
+                regex=/\wbhai/          //non word charecter
+                regex =/\w+bhai/;       // more then one non word charecter
+                regex =/\d999/;         // means \d digit
+                regex =/number \d999/;  // \d number
+                regex =/number \d+/;    // \d more then digit
+                regex =/\D999/;         // \D non digit
+                regex =/\D+999/;        // \D+ non digit more then
+                regex =/\ska number/;   // match whitespace charecter
+                regex =/\s+ka number/;  // match whitespace charecter more than
+                regex =/\Ska number/;   // non match white space character;
+                regex =/\S+ka number/;   // non more than match white space character;
+                regex =/4r5r\b/;   // word buondary
+                
+        //asertion
+                regex =/p(?=l)/; //p ho or uske bad l ho tab match kare
+                regex =/p(?!l)/; //p ho or uske bad l ho  match nhi ho tab
+                
+                //regex =/p(?!l)/;
+            
+                const str =`haary4r5r hel$bhai playal ka number 96037payal999`;
+               
+                
+                let result = regex.exec(str);
+                console.log('the result for exece',result);
+                
+                if(regex.test(str)){ //
+                console.log(`heelo ${str}javascript ${regex.source}`);
+                }
+                else{ 
+                console.log(`heelo ${str}javascript not been ${regex.source}`);
+                }
+            </script>
+    </body>
+    </html>

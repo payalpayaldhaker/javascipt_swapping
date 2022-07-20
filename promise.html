@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>promise chain</title>
+    </head>
+    <body>
+            <script>
+                
+                function func1(){ 
+                        return new Promise(function(resolve,reject){ 
+                                setTimeout(() => {
+                                    
+                              
+                                const error = false;
+                                if(!error){
+                                    
+                            console.log('faunction:has been resolve')
+                                resolve();
+                                }
+                                else{ 
+                                    console.log('faunction:has been not resolve')
+                                reject('this is not fulfeeland');
+                                }
+                            }, 2000);
+                        })
+                
+                }
+                func1().then(function(){ 
+                        console.log('payal:has been resolve');
+                }).catch(function(error){ 
+                console.log('payal:not has been resolcce'+error);
+                });
+            
+            </script> 
+        
+    </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>fetch api</title>
+    </head>
+    <body>
+            <button type="button" id="btn">postdata</button>
+            <script>
+            //get data
+               /*  function getData(){ 
+                url ='https://dummy.restapiexample.com/api/v1/employees';
+                fetch(url)
+                .then((response)=>{ 
+                    return response.json();
+                })
+                .then((data)=>{
+                console.log(data);
+               
+                console.log('oko')
+                })
+                .catch((error)=>{
+                console.log(error);
+                console.log('this is eror');
+                })
+                
+                }
+                getData(); */
+            
+            
+            //post data
+           /*  function getData(){ 
+                url ='https://dummy.restapiexample.com/api/v1/create';
+                 let data = {"name":"payal","surname":"dhakad"}
+                 params ={ 
+                    method: 'POST',
+                    headers:{ 
+                    'Content-Type':'application/json',
+                    },
+                    body:JSON.stringify(data)
+                 
+                 }
+                fetch(url,params)
+                .then((data)=>{ 
+                    return data.json();
+                })
+                .then((data)=>{
+                console.log(data);
+               
+                console.log('oko')
+                })
+                .catch((error)=>{
+                console.log(error);
+                console.log('this is eror');
+                })
+                
+                }
+                getData(); */
+            //xhr object
+/*             let btn = document.getElementById('btn');
+            btn.addEventListener('click',myFunction);
+            
+            function myFunction(){ 
+            let xhr =new XMLHttpRequest();
+            xhr.open('POST','https://dummy.restapiexample.com/api/v1/create',true)
+            xhr.getResponseHeader('Content-Type', 'application/json');
+            xhr.onload = function(){
+            console.log(this.responseText);}
+            const data = {"name":"payal","surname":"dhakad"}
+            
+            xhr.send(data);
+            
+            }
+ */           
+        //prmise object
+           /*  function myFunction(){  
+            return new Promise((resolve,reject)=>{ 
+                const error =false;
+                if(!error){ 
+                    console.log('resolve');
+                    resolve();
+                }
+                else{ 
+                console.log('reject');
+                reject();
+                }
+            })
+            
+            }
+            myFunction().then(()=>{ 
+            console.log('thne block')
+            
+            }).catch(function(){
+                console.log('catch block')
+            }) */
+               
+               //callback Function
+             /*   const data =[{"name":"payal","surname":"dhakad"}];
+                
+                let enrollfunction=(dataname,callback)=>{ 
+                setTimeout(()=>{ 
+                    data.push(dataname);
+                    console.log('data')
+                    callback();
+                },2000)
+                    
+                }
+                let getStudents=()=>{ 
+                    setTimeout(()=>{ 
+                        data.forEach(function(element){
+                        console.log(element);
+                        })
+                    },4000);
+                }
+                let newData ={"name":"akash","surname":"dhakad"}
+                enrollfunction(newData,getStudents); */
+               // getStudents();
+            </script> 
+    </body>
+</html>

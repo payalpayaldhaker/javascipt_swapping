@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Map in javascript</title>
+    </head>
+    <body>
+            
+            <script> 
+                   // maps in javascript 
+                   
+                   const myMap =new Map();
+                   
+                   let key1 ="mysrting";
+                   let key2 ={};
+                   let key3 =function(){}
+                   //seeting map values
+                   myMap.set(key1,'this is string')
+                   myMap.set(key2,'this is object')
+                   myMap.set(key3,'this is function')
+                   console.log(myMap);
+                   
+                   //getting map values
+                   let value1 =myMap.get(key1);
+                   console.log(value1);
+                   let value2 =myMap.get(key2);
+                   console.log(value2);
+                   let value3 =myMap.get(key3);
+                   console.log(value3);
+                   
+                   //get the size of map
+                   console.log(myMap.size);
+                   
+                   //for loop ki madad se key value kaise parpt kre
+                   
+                   for(let [key, value] of myMap){ 
+                   console.log(key,value);}
+                   //get only key
+                   for(let key of myMap.keys()){
+                   console.log('keys',key);
+                   }
+                   //get only value
+                   for(let value of myMap.values()){
+                   console.log(' item values is',value);
+                   }
+                   //foreach loop
+                   myMap.forEach((key,value)=>{ 
+                   console.log('key foreach',key)
+                   console.log('values foreach',value)
+                   })
+                   
+                   //converting ann array
+                   
+                   let myArray = Array.from(myMap);
+                   console.log('array',myArray);
+                   //only key
+                   let myKeysArray = Array.from(myMap.keys());
+                   console.log('array',myKeysArray);
+                   
+                   //only value
+                   let myValueArray = Array.from(myMap.values());
+                   console.log('array',myValueArray);
+                   </script>
+    </body>
+    </html>

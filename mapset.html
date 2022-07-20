@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Set map in javacript</title>
+    </head>
+    <body>
+                    
+                    
+            <script> 
+            
+                    console.log('this set ')
+                    
+                    //set is unique value stroe
+                    
+                    let mySet = new Set();
+                    //adding set value and no reapet value
+                    mySet.add('this')
+                    mySet.add('hello')
+                    mySet.add(true)
+                    mySet.add(400)
+                    mySet.add('that')
+                    mySet.add(function(){});
+                    mySet.add({});
+                    console.log(mySet);
+                    
+                    /* let mySet2 =new Set([1,'hello',true ,{a:'a'},'hello']);
+                    console.log('new set',mySet2); */
+                    
+                    //has true false value return
+                    console.log(mySet.has('that'));//check the 'that or not myset'
+                    
+                    //myser me se value ko delete karna
+                    
+                    console.log('before remuval ',mySet.has(400))
+                    
+                    console.log(mySet.delete(400))
+                    
+                    console.log('after remuval ',mySet.has(400))
+                        
+                    //set itrator  value
+                    for(let item of mySet){ 
+                       // console.log('itrator value',item);
+                    }
+                    //for each loop ki shayta set
+                    mySet.forEach(function(element){ 
+                    console.log('element',element)
+                    })
+                    let array =Array.from(mySet);
+                    console.log('array',array);
+                    
+                    //set method me add kar skte he or has ki helsp se value ture false bhi check kar skte he
+                    //or delete bhi kr skte he or sath hi hum arr or loop or foreach se bhi
+                    
+            </script>
+    </body>
+</html>

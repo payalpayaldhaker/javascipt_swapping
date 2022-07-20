@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>asynawait api</title>
+    </head>
+    <body>
+            <ul id="list"></ul>
+            <script> 
+            
+                  async  function myFunction(){ 
+                  
+                    let response = await fetch('https://api.github.com/users');
+                    
+                    let users = await response.json();
+                    
+                    return users;
+                       // return "payal"
+                    }
+                    
+                    console.log('before calling')
+                    let newfunction = myFunction();
+                    console.log('after calling')
+                    console.log(newfunction);
+                    newfunction.then((data)=>{ 
+                    console.log(data);
+                    str ='';
+                    let list =document.getElementById('list');
+                    data.forEach(function(element){ 
+                    str +=`<li>${element.login}</li>`
+                    });
+                    list.innerHTML =str;
+                    }).catch((error)=>{ 
+                     console.log('error')
+                    })
+            </script>
+    </body>
+</html>

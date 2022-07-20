@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data storge</title>
+    </head>
+    <body>
+                
+                    <script> 
+                    console.log('okoko');
+                    
+                    let myObj ={ 
+                            name:'Payal',
+                            surname:'Dhakad',
+                            address:'neemuch',
+                            contact:'666345364565',
+                            age:'20'
+                    }              
+                   // localStorage.setItem('userinformation',JSON.stringify(myObj));
+                    let item = JSON.parse(localStorage.getItem(name));
+                    console.log(item); 
+                    //console.log(myObj);
+                    //localStorage.clear();
+                    //localStorage.removeItem('name');
+                    //console.log(myObj);
+                    
+                    let impArray = ['adrak', 'pyaz', 'bhindi'];
+                    
+                      //Add a key-value pair inside local Storage
+                    localStorage.setItem('Name', 'Harry');
+                     localStorage.setItem('Name2', 'Rohan');
+                    localStorage.setItem('Name', 'payal');
+                    // localStorage.setItem('sabzi', JSON.stringify(impArray));
+
+                   // localStorage.removeItem('name');
+                 //let  name = localStorage.getItem('name3');
+             /*        localStorage.getItem('sabzi');
+                     console.log(name);
+                     
+                     let impArray = ['adrak', 'pyaz', 'bhindi'];
+                    
+                    // Add a key-value pair inside local Storage
+                    localStorage.setItem('Name', 'Harry');
+                    localStorage.setItem('Name2', 'Rohan');
+                    sessionStorage.setItem('Name3', 'payal');
+                     sessionStorage.setItem('sabzi', JSON.stringify(impArray)); */
+
+                  /* // localStorage.removeItem('name');
+                 let  name = sessionStorage.getItem('name3');
+                    name =JSON.parse(sessionStorage.getItem('sabzi'));
+                     console.log(name); */
+                    </script>
+    </body>
+</html>

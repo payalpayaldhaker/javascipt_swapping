@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loops in javssript</title>
+    </head>
+    <body>
+            <script> 
+                     console.log('*********for in loop *********************')
+                    let obj  ={ 
+                            name:'payal',
+                            surname:'dhakad',
+                            address:'neemuch',
+                    }
+                    for(let key in obj){ 
+                        //console.log(obj[key]);
+                    }
+                    
+                    let myString  ='hello javascript '
+                    for(let index in myString){  
+                        console.log(myString[index]);
+                    }
+                    console.log('*********for of loop *********************')
+                    let people =["payal","madhu","banwari","manisha","chanda","suresh","madanlal","kanchan","abml"]
+                    for(let index of people){ 
+                        console.log(index);
+                    }
+                    //string with for of loop
+                    for(let index of myString){ 
+                        console.log(index);
+                    }
+            </script>
+    </body>
+</html>

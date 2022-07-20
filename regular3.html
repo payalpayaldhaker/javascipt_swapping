@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>regulare expression character set</title>
+    </head>
+    <body>
+            
+                <script> 
+                        
+                //chacrecter set
+               /*  
+                let regex =/payal/i;
+                    regex=/p[abz]yal/; //can be  a.b.z chareacter
+                    regex=/p[a-z]yal/; //can be  a to z chareacter
+                    regex=/p[^bca]yal/; //can be  b,c or a  match chareacter
+                    regex=/p[^bca]ya[pl]/; //can be  b,c or a  not match  match chareacter
+                    regex=/p[a-zA-Z]ya[pl0-9][0-9]/; //can be a-z A-Z  or 0=-9   match  match chareacter
+                    regex=/p[abt]yal/;
+               // const str = 'payal72 good';
+               
+         //quantifires {}
+               regex =/pa{2}yal/ ///excectly two times
+               regex =/pa{0,2}yal/ ///(0 or 2)
+               // const str = 'paayal good';
+               
+        //grupings ()
+                regex =/(har){2}/; //har  two bar type hoga
+                regex = /(har){2}([0-9]r){3}/;
+                const str ='harhar1r4r5r'; */
+              
+                
+                let result = regex.exec(str);
+                console.log('the result for exece',result);
+                
+                if(regex.test(str)){ //
+                console.log(`heelo ${str}javascript ${regex.source}`);
+                }
+                else{ 
+                console.log(`heelo ${str}javascript not been ${regex.source}`);
+                }
+                </script>
+    </body>
+</html>

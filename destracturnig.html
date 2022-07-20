@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>destarctrungi in javascript</title>
+    </head>
+    <body>
+        <script>
+            ///destracturing in javascript
+            let a,b;
+            [a,b]=[300,400]
+            console.log(a,b);
+            //array
+            [a,b,c,...d] =[1,2,3,4,5,6,7,8,9,10,12,13,14];
+            /* console.log('a ki valuue',a)
+            console.log('b ki valuue',b)
+            console.log('c ki valuue',c)
+            console.log('d ki valuue',d) */
+            
+            //object
+            
+            ({a,b,c,...d}={a:1,b:2,c:3,d:4,e:5,f:6})
+            /* console.log('a ki valuue',a)
+            console.log('b ki valuue',b)
+            console.log('c ki valuue',c)
+            console.log('d ki valuue',d) */
+            
+            //array ke sath destractuting
+            //let fruits =['apple','mengo','orange','java','hyyy','helo','pythona'];
+            //[a ,b ,...c] = fruits;
+            //console.log(a,b,c);
+           
+           //object ke sath destractueing
+           console.log('destractunig')
+           let user = { 
+            name:'payal',
+           /*  surname:'dhakad', */
+            address:'neemuch',
+            start :function(){ 
+                console.log('call function')
+            }
+            
+           } 
+           name,address=user;
+           console.log(user);
+           /* ({...c} ={user});
+           console.log(c); */
+           console.log(user.start());
+            
+        
+        </script>
+    </body>
+</html>

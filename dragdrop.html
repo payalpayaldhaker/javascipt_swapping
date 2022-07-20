@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drag-drop in javascript</title>
+        <style>     
+                body{
+    background: darkslateblue;
+}
+
+                .imgBox{
+                    background-image: url('img/image.png');
+                    position: relative;
+                    top: 17px;
+                    left: 10px;
+                    height: 120px;
+                    width: 130px;
+                    cursor: pointer;
+                }
+                
+                .whiteBox{
+                    display: inline-block;
+                    height: 155px;
+                    width: 155px;
+                    margin: 10px;
+                    background-color: white;
+                    border: 3px black solid;
+                }
+                .hold{ 
+                    border: 10px solid rgb(172, 156, 156)(172, 156, 156);
+                }
+                .hide{ 
+                    display:none;
+                }
+                .dashed{ 
+                    background-color: gray;
+                    border-style: dark;
+                }
+        
+        </style>
+    </head>
+    <body>          <div class="whiteBox">
+                    <div class="imgBox" draggable="true"></div>
+                    </div>
+                    <div class="whiteBox"></div>
+                    <div class="whiteBox"></div>
+                    <div class="whiteBox"></div>
+                                       
+            <script> 
+            
+            //drag and drop in javascriptjg
+            
+                const imgBox =document.querySelector('.imgBox')    
+                const whiteBoxses =document.getElementsByClassName('whiteBox');   
+                
+                
+                imgBox.addEventListener('dragstart',(e)=>{
+                
+                    console.log('drag start has been triggerd');
+                    e.target.className +=' hold'
+                    setTimeout(()=>{ 
+                        e.target.className =' hide'
+                    },0)
+                });
+                
+                imgBox.addEventListener('dragend',(e)=>{
+                    console.log('drag end  has been triggerd');
+                    e.target.className ='imgBox'
+                });
+                
+                
+                for(whiteBox of whiteBoxses){
+                
+                    whiteBox.addEventListener('dragover',(e)=>{ 
+                        console.log('drag over has been triggerd');
+                        e.preventDefault();
+                        
+                    })
+                    whiteBox.addEventListener('dragenter',(e)=>{ 
+                        console.log('drag enter has been triggerd');
+                        e.target.className +=' dashed'
+                    })
+                    whiteBox.addEventListener('dragleave',(e)=>{ 
+                        console.log('drag leave has been triggerd');
+                        e.target.className ='whiteBox'
+                        
+                    })
+                    whiteBox.addEventListener('drop',(e)=>{ 
+                        console.log('drag drop has been triggerd');
+                        e.target.append(imgBox);
+                    })
+                }
+            </script>
+    </body>
+</html>
